@@ -1,0 +1,21 @@
+.transparent {
+
+  @include transparent-button($white, $font-color);
+
+  &.blue {
+    @include transparent-button($light-blue, $white);
+  }
+
+  &.yellow {
+    @include transparent-button($secondary-yellow, $white);
+  }
+
+  &.turquoise {
+    @include transparent-button($turquoise, $white);
+  }
+
+  &.violet-blue {
+    @include transparent-button($violetBlue, $white);
+  }
+
+}

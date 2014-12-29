@@ -1,0 +1,19 @@
+// Slick Bower Dependency Override
+
+.slick-next, .slick-prev  {
+  width: auto;
+  height: auto;
+  top: 40%;
+
+  &:before {
+    font-size: rem-calc(85);
+  }
+}
+
+.slick-prev {
+  left: 0;
+}
+
+.slick-next {
+  right: 0;
+}

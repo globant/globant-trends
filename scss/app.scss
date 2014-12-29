@@ -1,0 +1,367 @@
+@import "settings";
+@import "foundation";
+@import "globals";
+
+html,body {
+
+  @include at-medium() {
+    font-size: 80%;
+  }
+
+  @include at-small() {
+    font-size: 55%;
+  }
+
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  color: $font-color;
+}
+
+header {
+  padding: rem-calc(20) 0 rem-calc(20) 0;
+}
+
+header {
+  padding-bottom: 0;
+
+  h1 {
+    background-image: url("../img/globant-logo.svg");
+    background-repeat: no-repeat;
+    width: rem-calc(170);
+    background-size: rem-calc(170) auto;
+    margin: 0;
+
+    a {
+      display: block;
+      text-indent: -99999px;
+    }
+  }
+
+}
+
+.clear {
+  clear: both;
+}
+
+.stripe-bar {
+  background-image: url("../img/stripe.svg");
+  background-size: contain;
+  width: 100%;
+  height: rem-calc(9);
+}
+
+.hero, .sketching, .benchmark, .interview, .mood-boards, .interaction {
+  font-family: Miso Bold, Helvetica, Arial, sans-serif;
+  background-size: contain;
+  color: $white;
+  text-align: center;
+
+    .circle {
+      font-size: rem-calc(163);
+      margin: 0 auto;
+      @include circle(rem-calc(213), $dark-green);
+    }
+
+    h2 {
+      font-family: Miso Bold, Helvetica, Arial, sans-serif;
+      font-size: rem-calc(77);
+      text-align: center;
+      text-transform: uppercase;
+      margin: 0;
+      color: $white;
+    }
+
+    p {
+      font-size: rem-calc(74);
+      line-height: 2.8rem;
+
+      @include at-small() {
+        font-size: rem-calc(55);
+      }
+    }
+
+  }
+
+
+.hero {
+  background: url("../img/green-row.jpg") no-repeat;
+  height: rem-calc(563);
+  padding-top: rem-calc(60);
+}
+
+.sketching, .benchmark, .interview, .mood-boards, .interaction  {
+  height: rem-calc(655);
+  padding-top: rem-calc(120);
+  position: relative;
+
+    h2 {
+      font-size: rem-calc(120);
+      text-shadow: 2px 3px 3px $black;
+    }
+
+    p {
+      font-size: rem-calc(21px);
+      font-family: "Open Sans", sans-serif;
+      font-weight: 400;
+      line-height: 1.8rem;
+      text-shadow: 2px 2px 1px $black;
+      padding-bottom: rem-calc(100);
+    }
+
+}
+
+.sketching {
+  background: url("../img/sketching-row.jpg") no-repeat;
+
+  @include at-small() {
+    background-image: none;
+    background-color: $turquoise;
+    p, h2 {
+      text-shadow: none;
+    }
+  }
+
+}
+
+.benchmark {
+  background: $primary-red;
+    p {
+      color: $secondary-yellow;
+      text-shadow: none;
+    }
+}
+
+.interview {
+  background: url("../img/interview-row.jpg") no-repeat;
+
+  h2 {
+    color: $secondary-yellow;
+  }
+  p {
+    color: $turquoise;
+    text-shadow: none;
+  }
+
+}
+
+.mood-boards {
+  background: url("../img/light-blue-row.jpg") no-repeat;
+
+  h2 {
+    color: $white;
+  }
+  p {
+    color: $violetBlue;
+    text-shadow: none;
+  }
+}
+
+.interaction {
+  background: url("../img/interaction-row.jpg") no-repeat;
+}
+
+.slide-panel {
+  width: rem-calc(700);
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: inherit;
+  padding: rem-calc(80) rem-calc(60) 0;
+  background: $white;
+  @include at-small() {
+    width: 100%;
+  }
+  @include at-medium() {
+    width: 100%;
+  }
+
+  .tip {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    color: $white;
+    text-transform: uppercase;
+    font-size: rem-calc(20);
+    margin: 0 auto;
+    @include circle(rem-calc(58), $light-blue);
+  }
+
+    p {
+      color: $font-color;
+      font-size: rem-calc(16);
+      padding: 0 0 rem-calc(20) 0;
+      text-shadow: none;
+    }
+
+  .highlight {
+    color: $font-color-bold;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    padding: rem-calc(20) 0 rem-calc(20) 0;
+    line-height: normal;
+  }
+}
+
+.interview-section {
+
+  &.tabs-content {
+    background: url("../img/art1.jpg") no-repeat rem-calc(-50) rem-calc(347);
+    background-size: rem-calc(452) auto;
+  }
+
+  p {
+    font-size: rem-calc(18);
+  }
+
+  li {
+    position: relative;
+    overflow: hidden;
+    @include at-small-portrait() {
+      height: rem-calc(700);
+    }
+
+    img {
+      width: 100%;
+
+      @include at-small-portrait() {
+        margin-top: rem-calc(-300);
+      }
+    }
+
+    a {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      color: $white;
+      font-family: Miso Bold, Helvetica, Arial, sans-serif;
+      text-transform: uppercase;
+      font-size: rem-calc(50);
+      padding: 0 rem-calc(20);
+      @include single-transition(background, 0.25s, linear);
+
+      span {
+        line-height: rem-calc(45);
+        display: block;
+        padding-top: rem-calc(330);
+        white-space: pre-line;
+        width: 80%;
+
+      }
+
+      blockquote {
+        color: $white;
+        font-size: rem-calc(20);
+        line-height: normal;
+        border: 0;
+        border-top: 1px solid $white;
+        border-bottom: 1px solid $white;
+        padding: rem-calc(20) rem-calc(5);
+        margin-top: rem-calc(20);
+      }
+    }
+
+    &.active {
+      a {
+        @include background-opacity($font-color, 0.3);
+      }
+    }
+
+  }
+
+  @each $current-color in $colors-list {
+    $i: index($colors-list, $current-color);
+    .pic-#{$i} {
+      @include background-opacity($current-color, 0.7);
+    }
+  }
+
+  .content {
+    padding: rem-calc(40) rem-calc(90);
+  }
+
+  .flyout-panel {
+    position: relative;
+    color: $font-color;
+    margin: rem-calc(40) rem-calc(-90) rem-calc(60);
+
+    img {
+      max-width: rem-calc(645);
+    }
+
+    &:before {
+      content: attr(title);
+      position: absolute;
+      top: rem-calc(200);
+      left: rem-calc(-170);
+      width: rem-calc(145);
+      padding-bottom: rem-calc(8);
+      font-style: italic;
+      border-bottom: 1px solid $font-color;
+    }
+
+  }
+
+  .panel {
+    width: 60%;
+
+    @include at-small-portrait() {
+      width: 100%;
+    }
+
+    &.right {
+      background: $white;
+      border: 0;
+      padding: 0;
+    }
+  
+  }
+
+}
+
+.panel-callout {
+  background: $lilac;
+  color: $white;
+  font-size: rem-calc(22);
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300; 
+  padding: rem-calc(70) rem-calc(35) rem-calc(35);
+
+
+  &.left {
+    width: 30%;
+    @include at-small-portrait() {
+      width: 100%;
+    }
+  }
+}
+
+.pagination {
+  font-family: Miso Bold, Helvetica, Arial, sans-serif;
+  color: $white;
+  font-size: rem-calc(30);
+  position: relative;
+  text-align: right;
+  padding: rem-calc(6) rem-calc(90);
+
+  background: $primary-red;
+    a {
+      color: $white;
+      position: absolute;
+      width: 6%;
+      top: rem-calc(6);
+      text-align: center;
+
+      &.prev {
+        left: 0;
+      }
+      &.next {
+        right: 0;
+      }
+    }
+
+}

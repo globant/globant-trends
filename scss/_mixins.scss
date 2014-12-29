@@ -1,0 +1,96 @@
+@mixin MisoBold($family,$src,$weight: normal,$style: normal) {
+  @font-face {
+    font-family: $family;
+    src: url('#{$src}.eot'); // IE9 compat
+    src: url('#{$src}.eot?#iefix') format('embedded-opentype'), // IE8 and below
+    url('#{$src}.woff') format('woff'), // standards
+    url('#{$src}.ttf') format('truetype'), // Safari, Android, iOS
+    url('#{$src}.svg##{$family}') format('svg'); // legacy iOS
+
+    font-style: $style;
+    font-weight: $weight;
+  }
+}
+
+@mixin circle($width, $color) {
+  width: $width;
+  height: $width;
+  background: $color;
+  line-height: $width;
+  -webkit-border-radius: $width/2;
+  -moz-border-radius: $width/2;
+  border-radius: $width/2;
+}
+
+@mixin background-opacity($color, $opacity: 0.3) {
+  background: $color; /* The Fallback */
+  background: rgba($color, $opacity);
+}
+
+@mixin transparent-button($color, $colorHover) {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  background: none;
+  border: rem-calc(2) solid $color;
+  padding-left: rem-calc(60);
+  padding-right: rem-calc(60);
+  text-transform: uppercase;
+  color: $color;
+
+  &:hover {
+    background: $color;
+    color: $colorHover;
+    border-color: $color;
+    @include background-opacity($color, 0.9);
+  }
+}
+
+/* min-width 1025px, large screens */
+@mixin at-medium-down(){
+  @media (max-width: 64.063em) { @content; }
+}
+
+/* min-width 641px, medium screens */
+@mixin at-medium(){
+  @media (min-width: 40.06em) and (max-width: 64.063em) { @content; }
+}
+
+/* max-width 640px, mobile-only styles, use when QAing mobile issues */
+@mixin at-small(){
+  @media (max-width: 40em) { @content; }
+}
+
+/* Portrait mobile-only styles, use when QAing mobile issues */
+@mixin at-small-portrait() {
+  @media (max-width: 40em) and (orientation: portrait) { @content; }
+}
+
+/* Landscape mobile-only styles, use when QAing mobile issues */
+@mixin at-small-landscape() {
+  @media (max-width: 40em) and (orientation: landscape) { @content; }
+}
+
+//use this mixins to match touch and no-touch devices
+@mixin at-touch-device(){
+  html.touch &{
+    @content;
+  }
+}
+@mixin at-no-touch-device(){
+  html.no-touch &{
+    @content;
+  }
+}
+
+//use this mixins to match IE-8 or later
+@mixin at-lt-ie9(){
+  html.lt-ie9 &{
+    @content;
+  }
+}
+//use this mixins to match IE-9 or later
+@mixin at-lt-ie10(){
+  html.lt-ie10 &{
+    @content;
+  }
+}
