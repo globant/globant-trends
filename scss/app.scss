@@ -114,6 +114,7 @@ header {
 
 .sketching {
   background: url("../img/sketching-row.jpg") no-repeat;
+  background-size: cover;
 
   @include at-small() {
     background-image: none;
@@ -160,6 +161,7 @@ header {
 
 .interaction {
   background: url("../img/interaction-row.jpg") no-repeat;
+  background-size: cover;
 }
 
 .slide-panel {
