@@ -43,6 +43,10 @@
     border-color: $color;
     @include background-opacity($color, 0.9);
   }
+
+  &:focus {
+    background: inherit;
+  }
 }
 
 /* min-width 1025px, large screens */

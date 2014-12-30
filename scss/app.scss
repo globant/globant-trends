@@ -108,7 +108,6 @@ header {
       font-weight: 400;
       line-height: 1.8rem;
       text-shadow: 2px 2px 1px $black;
-      padding-bottom: rem-calc(100);
     }
 
 }
@@ -169,13 +168,16 @@ header {
   top: 0;
   right: 0;
   height: inherit;
-  padding: rem-calc(80) rem-calc(60) 0;
   background: $white;
   @include at-small() {
     width: 100%;
   }
   @include at-medium() {
     width: 100%;
+  }
+
+  .aside-content {
+    padding: rem-calc(80) rem-calc(60) 0;
   }
 
   .tip {
@@ -191,7 +193,6 @@ header {
     p {
       color: $font-color;
       font-size: rem-calc(16);
-      padding: 0 0 rem-calc(20) 0;
       text-shadow: none;
     }
 

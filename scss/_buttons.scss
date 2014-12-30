@@ -18,4 +18,8 @@
     @include transparent-button($violetBlue, $white);
   }
 
+  &.red {
+    @include transparent-button($primary-red, $white);
+  }
+
 }

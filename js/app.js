@@ -1,4 +1,17 @@
-$(document).foundation();
+$(document).foundation({
+    offcanvas : {
+        // Sets method in which offcanvas opens.
+        // [ move | overlap_single | overlap ]
+        open_method: 'overlap_single'
+    }
+});
+
+
+$('.off-canvas-wrap').on('click', function (e) {
+    e.preventDefault();
+    $(this).foundation('offcanvas', 'hide', 'offcanvas-overlap-left');
+});
+
 
 
 $('.multiple-items').slick({
