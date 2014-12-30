@@ -45,7 +45,8 @@
   }
 
   &:focus {
-    background: inherit;
+    background: darken($color, 10%);
+    color: $colorHover;
   }
 }
 

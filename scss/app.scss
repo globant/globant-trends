@@ -108,6 +108,10 @@ header {
       font-weight: 400;
       line-height: 1.8rem;
       text-shadow: 2px 2px 1px $black;
+
+      &.description {
+        padding-bottom: rem-calc(50px);
+      }
     }
 
 }
