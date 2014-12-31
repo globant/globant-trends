@@ -174,6 +174,7 @@ header {
   top: 0;
   right: 0;
   height: inherit;
+  text-align: center;
   background: $white;
   @include at-small() {
     width: 100%;
@@ -358,7 +359,6 @@ header {
 
 
   h2 {
-    text-align: left;
     width: rem-calc(300);
     display: inline-block;
     line-height: rem-calc(105);
