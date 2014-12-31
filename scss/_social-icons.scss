@@ -1,0 +1,60 @@
+.social-links {
+  list-style: none;
+  margin: 0 0 0 rem-calc(-13);
+  @include at-small() {
+    margin: 0;
+  }
+
+  a {
+    color: $white;
+    background: transparent;
+    font-size: rem-calc(25);
+    display: inline-block;
+    float: left;
+    font-family: "Social Fonts", "Open Sans", Helvetica, Arial, sans-serif;
+    margin-right: rem-calc(5);
+    font-variant: normal;
+    text-transform: none;
+    text-align: center;
+    width: 4%;
+    @include single-transition(background, 0.23s, linear);
+    @include at-small() {
+      margin-right: rem-calc(25);
+    }
+
+    &:hover {
+      background: $white;
+      color: $font-color;
+    }
+
+    .icon-facebook {
+      &:before {
+        content: '\e800';
+        font-style: normal;
+      }
+    }
+
+    .icon-twitter {
+      &:before {
+        content: '\e801';
+        font-style: normal;
+      }
+    }
+
+    .icon-linkedin {
+      &:before {
+        content: '\e802';
+        font-style: normal;
+      }
+    }
+
+    .icon-google{
+      &:before {
+        content: '\e803';
+        font-style: normal;
+      }
+    }
+
+  }
+
+}

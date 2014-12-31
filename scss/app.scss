@@ -53,7 +53,7 @@ header {
   height: rem-calc(9);
 }
 
-.hero, .sketching, .benchmark, .interview, .mood-boards, .interaction {
+.hero, .sketching, .benchmark, .interview, .mood-boards, .interaction, .video-for-work {
   font-family: Miso Bold, Helvetica, Arial, sans-serif;
   background-size: contain;
   color: $white;
@@ -92,7 +92,7 @@ header {
   padding-top: rem-calc(60);
 }
 
-.sketching, .benchmark, .interview, .mood-boards, .interaction  {
+.sketching, .benchmark, .interview, .mood-boards, .interaction, .video-for-work  {
   height: rem-calc(655);
   padding-top: rem-calc(120);
   position: relative;
@@ -330,12 +330,61 @@ header {
 
 }
 
+.hero {
+  &.video-header {
+    padding-top: rem-calc(160);
+
+    h2 {
+      line-height: normal;
+      font-size: rem-calc(90);
+      span {
+        display: block;
+      }
+
+    }
+
+  }
+}
+
+.video-for-work {
+  background: url("../img/bg-videos.jpg") no-repeat;
+  background-size: cover;
+  text-align: left;
+  padding: rem-calc(90) 0 0 rem-calc(130);
+
+  @include at-small() {
+    padding: rem-calc(90) 0 0 rem-calc(35);
+  }
+
+
+  h2 {
+    text-align: left;
+    width: rem-calc(300);
+    display: inline-block;
+    line-height: rem-calc(105);
+  }
+
+  p {
+
+    &.description {
+      font-family: Miso Bold, "Open Sans", Helvetica, Arial, sans-serif;
+      text-transform: uppercase;
+      font-size: rem-calc(24);
+      width: rem-calc(450);
+      padding: rem-calc(33) 0;
+    }
+
+  }
+
+
+}
+
 .panel-callout {
   background: $lilac;
   color: $white;
   font-size: rem-calc(22);
   font-family: "Open Sans", sans-serif;
-  font-weight: 300; 
+  font-weight: 300;
   padding: rem-calc(70) rem-calc(35) rem-calc(35);
 
 
