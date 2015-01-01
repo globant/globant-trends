@@ -53,7 +53,7 @@ header {
   height: rem-calc(9);
 }
 
-.hero, .sketching, .benchmark, .interview, .mood-boards, .interaction, .video-for-work {
+.hero, .sketching, .benchmark, .interview, .mood-boards, .interaction, .video-for-work, .mobile-ux {
   font-family: Miso Bold, Helvetica, Arial, sans-serif;
   background-size: contain;
   color: $white;
@@ -92,7 +92,7 @@ header {
   padding-top: rem-calc(60);
 }
 
-.sketching, .benchmark, .interview, .mood-boards, .interaction, .video-for-work  {
+.sketching, .benchmark, .interview, .mood-boards, .interaction, .video-for-work, .mobile-ux  {
   height: rem-calc(655);
   padding-top: rem-calc(120);
   position: relative;
@@ -176,6 +176,16 @@ header {
   height: inherit;
   text-align: center;
   background: $white;
+
+  &.dark {
+    background: $font-color;
+    @include background-opacity($font-color, 0.9);
+    p {
+      color: $white;
+    }
+
+  }
+
   @include at-small() {
     width: 100%;
   }
@@ -209,6 +219,11 @@ header {
     font-weight: 600;
     padding: rem-calc(20) 0 rem-calc(20) 0;
     line-height: normal;
+
+    &.dark {
+      color: $white;
+    }
+
   }
 }
 
@@ -376,6 +391,24 @@ header {
 
   }
 
+
+}
+
+.mobile-ux {
+  background: url("../img/mobile-ux.jpg") no-repeat;
+  background-size: cover;
+  text-align: right;
+  padding: rem-calc(90) rem-calc(130) 0 0;
+
+  p {
+
+    &.description {
+      font-family: Miso Bold, "Open Sans", Helvetica, Arial, sans-serif;
+      text-transform: uppercase;
+      font-size: rem-calc(24);
+    }
+
+  }
 
 }
 
