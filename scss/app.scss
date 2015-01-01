@@ -365,50 +365,17 @@ header {
 .video-for-work {
   background: url("../img/bg-videos.jpg") no-repeat;
   background-size: cover;
-  text-align: left;
-  padding: rem-calc(90) 0 0 rem-calc(130);
 
-  @include at-small() {
-    padding: rem-calc(90) 0 0 rem-calc(35);
+  p.description {
+    text-transform: uppercase;
+    font-family: Miso Bold, Helvetica, Arial, sans-serif;
   }
-
-
-  h2 {
-    width: rem-calc(300);
-    display: inline-block;
-    line-height: rem-calc(105);
-  }
-
-  p {
-
-    &.description {
-      font-family: Miso Bold, "Open Sans", Helvetica, Arial, sans-serif;
-      text-transform: uppercase;
-      font-size: rem-calc(24);
-      width: rem-calc(450);
-      padding: rem-calc(33) 0;
-    }
-
-  }
-
 
 }
 
 .mobile-ux {
   background: url("../img/mobile-ux.jpg") no-repeat;
   background-size: cover;
-  text-align: right;
-  padding: rem-calc(90) rem-calc(130) 0 0;
-
-  p {
-
-    &.description {
-      font-family: Miso Bold, "Open Sans", Helvetica, Arial, sans-serif;
-      text-transform: uppercase;
-      font-size: rem-calc(24);
-    }
-
-  }
 
 }
 
@@ -452,5 +419,29 @@ header {
         right: 0;
       }
     }
+
+}
+
+.inner-wrap {
+
+  &.left {
+    text-align: left;
+    padding: rem-calc(50) 0 0 rem-calc(120);
+
+    h2 {
+      text-align: left;
+    }
+
+  }
+
+    &.right {
+    text-align: right;
+    padding: rem-calc(50) rem-calc(120) 0 0;
+
+    h2 {
+      text-align: right;
+    }
+
+  }
 
 }
