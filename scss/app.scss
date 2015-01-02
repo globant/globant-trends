@@ -426,10 +426,20 @@ header {
 
   &.left {
     text-align: left;
-    padding: rem-calc(50) 0 0 rem-calc(120);
+    padding: rem-calc(50) 0 0 rem-calc(110);
+    @include at-medium-down() {
+      text-align: center;
+      padding: rem-calc(90) 0;
+      .social-links {
+        margin: 0 auto;
+      }
+    }
 
     h2 {
       text-align: left;
+      @include at-medium-down() {
+        text-align: center;
+      }
     }
 
   }
@@ -438,9 +448,23 @@ header {
     text-align: right;
     padding: rem-calc(50) rem-calc(120) 0 0;
 
+    @include at-medium-down() {
+      text-align: center;
+      padding: rem-calc(90) 0;
+    }
+
     h2 {
       text-align: right;
+
+      @include at-medium-down() {
+        text-align: center;
+      }
+
     }
+
+      .social-links {
+        margin: 0 auto;
+      }
 
   }
 
