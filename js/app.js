@@ -20,6 +20,15 @@ $('.modal-trigger').on('click', function(e) {
     $(modalElement).toggleClass('hide');
 });
 
+$('.close-modal').on('click', function(e) {
+    var iframeVideo = $(this).next();
+    e.preventDefault();
+
+    iframeVideo.attr('src',iframeVideo[0].src);
+    $(this).parent().toggleClass('hide');
+
+});
+
 
 
 $('.multiple-items').slick({
