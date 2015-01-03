@@ -23,7 +23,7 @@ function onPlayerReady() {
     var playButton = $('.close-modal');
     playButton.on("click", function(e) {
         e.preventDefault();
-        player.stopVideo();
+        player.pauseVideo();
         $(this).parent().toggleClass('hide');
     });
 
