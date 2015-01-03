@@ -13,6 +13,13 @@ $('.off-canvas-wrap').on('click', function (e) {
     $(this).foundation('offcanvas', 'hide', 'offcanvas-overlap-right');
 });
 
+$('.modal-trigger').on('click', function(e) {
+    var modalElement = $(this).attr('href');
+
+    e.preventDefault();
+    $(modalElement).toggleClass('hide');
+});
+
 
 
 $('.multiple-items').slick({

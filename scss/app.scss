@@ -468,4 +468,17 @@ header {
 
   }
 
+  .modal-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include background-opacity($font-color, 0.9);
+    width: 100%;
+      
+      .source-media {
+        margin: 0 auto;
+        display: block;
+      }
+  }
+
 }
