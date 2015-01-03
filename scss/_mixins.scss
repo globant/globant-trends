@@ -12,7 +12,7 @@
   }
 }
 
-@mixin SocialFonts($family,$src,$weight: normal,$style: normal) {
+@mixin SocialFonts($family,$src,$weight,$style) {
   @font-face {
     font-family: $family;
     src: url('#{$src}.eot'); // IE9 compat

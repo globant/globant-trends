@@ -468,17 +468,70 @@ header {
 
   }
 
-  .modal-video {
+
+  .social-links {
+    list-style: none;
+    margin: 0 0 0 rem-calc(-20);
+    width: rem-calc(260);
+
+    &.right {
+      margin: 0 rem-calc(-20) 0 0;
+    }
+
+    &.dark {
+      margin: 0 auto;
+
+      a {
+        color: $grey;
+      }
+    }
+
+    @include at-small() {
+      margin: 0;
+      width: rem-calc(210);
+    }
+
+    a {
+      color: $white;
+      background: transparent;
+      font-size: rem-calc(25);
+      display: block;
+      float: left;
+      font-family: "Icon Fonts", "Open Sans", Helvetica, Arial, sans-serif;
+      padding: rem-calc(10) rem-calc(20);
+      font-variant: normal;
+      text-transform: none;
+      text-align: center;
+      @include single-transition(background, 0.23s, linear);
+      @include at-small() {
+        padding: rem-calc(8) rem-calc(15);
+      }
+
+      &:hover {
+        background: $white;
+        color: $font-color;
+      }
+
+    }
+
+  }
+
+  .flex-video {
     position: absolute;
     top: 0;
     left: 0;
     @include background-opacity($font-color, 0.9);
     width: 100%;
-      
-      .source-media {
-        margin: 0 auto;
-        display: block;
-      }
+
+    .close-modal {
+      font-family: "Icon Fonts", "Open Sans", Helvetica, Arial, sans-serif;
+      position: absolute;
+      right:rem-calc(20);
+      top: rem-calc(3);
+      color: $primary-red;
+      font-size: rem-calc(58);
+      z-index: 99;
+    }
   }
 
 }
