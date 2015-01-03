@@ -11,6 +11,7 @@ var player;
 function onYouTubeIframeAPIReady() {
     player = new YT.Player('player', {
         videoId: $('#player').attr('data-video'),
+        playerVars: { 'showinfo': 0, 'rel': 0, 'theme': 'light', 'modestbranding': 1 },
         events: {
             'onReady': onPlayerReady
         }
