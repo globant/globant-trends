@@ -34,16 +34,16 @@ function onYouTubeIframeAPIReady() {
 }
 
 // The API will call this function when the video player is ready.
-function onPlayerReady(event) {
+function onPlayerReady() {
 
     $('.close-modal').on('click', function (event) {
         event.preventDefault();
-        stopVideo();
+        pauseVideo();
     });
 
 }
 
-function stopVideo() {
-    player.stopVideo();
+function pauseVideo() {
+    player.pauseVideo();
 
 }
