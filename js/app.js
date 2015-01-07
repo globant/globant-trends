@@ -2,7 +2,7 @@ $(document).foundation({
     offcanvas : {
         // Sets method in which offcanvas opens.
         // [ move | overlap_single | overlap ]
-        open_method: 'move'
+        open_method: 'overlap_single'
     }
 });
 
