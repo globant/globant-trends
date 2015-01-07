@@ -169,10 +169,6 @@ header {
 }
 
 .slide-panel {
-  width: rem-calc(700);
-  position: absolute;
-  top: 0;
-  right: 0;
   height: inherit;
   text-align: center;
   background: $white;
@@ -184,13 +180,6 @@ header {
       color: $white;
     }
 
-  }
-
-  @include at-small() {
-    width: 100%;
-  }
-  @include at-medium() {
-    width: 100%;
   }
 
   .aside-content {

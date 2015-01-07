@@ -9,8 +9,8 @@ $(document).foundation({
 
 $('.off-canvas-wrap').on('click', function (e) {
     e.preventDefault();
-    $(this).foundation('offcanvas', 'hide', 'offcanvas-overlap-left');
-    $(this).foundation('offcanvas', 'hide', 'offcanvas-overlap-right');
+    $(this).foundation('offcanvas', 'hide', 'move-left');
+    $(this).foundation('offcanvas', 'hide', 'move-right');
 });
 
 
