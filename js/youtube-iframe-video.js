@@ -6,14 +6,16 @@ var firstScriptTag = document.getElementsByTagName('script')[0];
 var player;
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-function onYouTubeIframeAPIReady() {
+function onYouTubeIframeAPIReady () {
     var container;
     var videoId;
+    var iframeVideo;
 
     $('.modal-trigger').on('click', function (e) {
         e.preventDefault();
         container = $(this).closest('.slide-panel').next().children('.player-video').attr('id');
         videoId = $(this).closest('.slide-panel').next().children('.player-video').attr('data-video');
+        iframeVideo = 'iframe#' + container;
         playerVideo(container, videoId);
     });
 
@@ -29,6 +31,11 @@ function onYouTubeIframeAPIReady() {
                 'onReady': onPlayerReady
             }
         });
+
+        $('.close-modal').one('click', function (event) {
+            event.preventDefault();
+            $(iframeVideo).attr('src', $(iframeVideo).attr('src'));
+        });
     }
 
 }
@@ -36,14 +43,5 @@ function onYouTubeIframeAPIReady() {
 // The API will call this function when the video player is ready.
 function onPlayerReady() {
 
-    $('.close-modal').on('click', function (event) {
-        event.preventDefault();
-        pauseVideo();
-    });
-
-}
-
-function pauseVideo() {
-    player.pauseVideo();
 
 }
