@@ -7,14 +7,16 @@ var player;
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 function onYouTubeIframeAPIReady () {
-    var container;
-    var videoId;
-    var iframeVideo;
+    var targetElement,
+        container,
+        videoId,
+        iframeVideo;
 
     $('.modal-trigger').on('click', function (e) {
         e.preventDefault();
-        container = $(this).closest('.slide-panel').next().children('.player-video').attr('id');
-        videoId = $(this).closest('.slide-panel').next().children('.player-video').attr('data-video');
+        targetElement = $(this).siblings('.flex-video').children('.player-video');
+        container = targetElement.attr('id');
+        videoId = targetElement.attr('data-video');
         iframeVideo = 'iframe#' + container;
         playerVideo(container, videoId);
     });

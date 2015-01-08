@@ -19,8 +19,7 @@ $('.off-canvas-wrap').on('click', function (e) {
  }
 
  $('.modal-trigger').on('click', function(e) {
-     var $modalElement = $(this).closest('.slide-panel').next();
-
+     var $modalElement = $(this).siblings('.flex-video');
      e.preventDefault();
      toggleModal($modalElement);
  });
