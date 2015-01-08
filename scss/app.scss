@@ -465,6 +465,10 @@ header {
 
     &.right {
       margin: 0 rem-calc(-20) 0 0;
+      @include at-medium-down {
+        margin: 0 auto !important;
+        float: none !important;
+      }
     }
 
     &.dark {
