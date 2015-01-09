@@ -169,7 +169,7 @@ header {
 
 .interaction {
   background: url("../img/interaction-row.jpg") no-repeat;
-  background-position: center rem-calc(-210);
+  background-position: center rem-calc(-90);
 
   @include at-small() {
     background-position: center top;
