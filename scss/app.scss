@@ -21,18 +21,14 @@ body {
 }
 
 header {
-  padding: rem-calc(20) 0 rem-calc(20) 0;
-}
-
-header {
-  padding-bottom: 0;
+  padding: rem-calc(40) 0 0;
 
   h1 {
     background-image: url("../img/globant-logo.svg");
     background-repeat: no-repeat;
-    width: rem-calc(170);
-    background-size: rem-calc(170) auto;
-    margin: 0;
+    width: rem-calc(250);
+    background-size: rem-calc(250) auto;
+    margin: 0 0 rem-calc(30) rem-calc(35);
 
     a {
       display: block;
@@ -88,12 +84,18 @@ header {
 
 .hero {
   background: url("../img/green-row.jpg") no-repeat;
-  height: rem-calc(563);
+  background-size: cover;
+  height: rem-calc(655);
   padding-top: rem-calc(60);
 }
 
 .sketching, .benchmark, .interview, .mood-boards, .interaction, .video-for-work, .mobile-ux  {
-  height: rem-calc(655);
+  height: rem-calc(755);
+
+  @include at-small() {
+    height: rem-calc(655);
+  }
+
   padding-top: rem-calc(120);
   position: relative;
 
@@ -140,6 +142,7 @@ header {
 
 .interview {
   background: url("../img/interview-row.jpg") no-repeat;
+  background-size: cover;
 
   h2 {
     color: $secondary-yellow;
@@ -153,6 +156,7 @@ header {
 
 .mood-boards {
   background: url("../img/light-blue-row.jpg") no-repeat;
+  background-size: cover;
 
   h2 {
     color: $white;
@@ -165,6 +169,16 @@ header {
 
 .interaction {
   background: url("../img/interaction-row.jpg") no-repeat;
+  background-position: center rem-calc(-210);
+
+  @include at-small() {
+    background-position: center top;
+  }
+
+  @include at-medium() {
+    background-position: center top;
+  }
+
   background-size: cover;
 }
 
@@ -299,10 +313,14 @@ header {
   .flyout-panel {
     position: relative;
     color: $font-color;
-    margin: rem-calc(40) rem-calc(-90) rem-calc(60);
+    margin: rem-calc(40) 0 rem-calc(60);
 
     img {
       max-width: rem-calc(645);
+      @include at-small-portrait() {
+        max-width: 100%;
+      }
+
     }
 
     &:before {
@@ -337,11 +355,11 @@ header {
 
 .hero {
   &.video-header {
-    padding-top: rem-calc(160);
+    padding-top: rem-calc(180);
 
     h2 {
       line-height: normal;
-      font-size: rem-calc(90);
+      font-size: rem-calc(100);
       span {
         display: block;
       }
@@ -354,6 +372,11 @@ header {
 .video-for-work {
   background: url("../img/bg-videos.jpg") no-repeat;
   background-size: cover;
+  height: rem-calc(860);
+
+  @include at-small() {
+    height: rem-calc(655);
+  }
 
   p.description {
     text-transform: uppercase;
@@ -365,6 +388,11 @@ header {
 .mobile-ux {
   background: url("../img/mobile-ux.jpg") no-repeat;
   background-size: cover;
+  height: rem-calc(860);
+
+  @include at-small() {
+    height: rem-calc(655);
+  }
 
 }
 
@@ -415,13 +443,18 @@ header {
 
   &.left {
     text-align: left;
-    padding: rem-calc(50) 0 0 rem-calc(110);
+    padding: rem-calc(90) 0 0 rem-calc(110);
+
     @include at-medium-down() {
       text-align: center;
-      padding: rem-calc(90) 0;
+      padding: rem-calc(130) 0;
       .social-links {
         margin: 0 auto;
       }
+    }
+
+    @include at-small() {
+      padding: rem-calc(100) 0;
     }
 
     h2 {
@@ -435,12 +468,16 @@ header {
 
     &.right {
     text-align: right;
-    padding: rem-calc(50) rem-calc(120) 0 0;
+    padding: rem-calc(90) rem-calc(120) 0 0;
 
     @include at-medium-down() {
       text-align: center;
-      padding: rem-calc(90) 0;
+      padding: rem-calc(140) 0;
     }
+
+      @include at-small() {
+        padding: rem-calc(100) 0;
+      }
 
     h2 {
       text-align: right;
@@ -515,6 +552,7 @@ header {
     left: 0;
     @include background-opacity($font-color, 0.9);
     width: 100%;
+    height: inherit;
 
     .close-modal {
       font-family: "Icon Fonts", "Open Sans", Helvetica, Arial, sans-serif;
