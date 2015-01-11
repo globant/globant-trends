@@ -47,6 +47,15 @@ header {
   background-size: contain;
   width: 100%;
   height: rem-calc(9);
+
+  @include at-medium() {
+    background-size: cover;
+  }
+
+  @include at-small() {
+    background-size: cover;
+  }
+
 }
 
 .hero, .sketching, .benchmark, .interview, .mood-boards, .interaction, .video-for-work, .mobile-ux {
@@ -83,8 +92,8 @@ header {
 
 
 .hero {
-  background: url("../img/green-row.jpg") no-repeat;
-  background-size: cover;
+  background: url("../img/gree-row-2.jpg") repeat-x;
+  background-size: contain;
   height: rem-calc(655);
   padding-top: rem-calc(60);
 }
@@ -374,6 +383,10 @@ header {
   background-size: cover;
   height: rem-calc(860);
   background-position: center center;
+
+  &.full-screen {
+    height: 100vh;
+  }
 
   @include at-medium-down () {
     background-position: rem-calc(-300) center;
