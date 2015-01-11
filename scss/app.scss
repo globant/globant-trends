@@ -588,31 +588,13 @@ header {
   @include single-transition(all, 0.30s, ease-out);
 
   &.category-nav_left {
-    left: -6.5%;
-
-    @include at-medium() {
-      left: -9%;
-    }
-
-    @include at-medium-portrait() {
-      left: -11%;
-    }
-
+    left: rem-calc(-120);
     text-align: right;
     padding-right: rem-calc(12);
   }
 
   &.category-nav_right {
-    right: -6.5%;
-
-    @include at-medium() {
-      right: -9%;
-    }
-
-    @include at-medium-portrait() {
-      right: -11%;
-    }
-
+    right: rem-calc(-120);
     text-align: left;
     padding-left: rem-calc(12);
   }
@@ -622,11 +604,17 @@ header {
     &.category-nav_left {
       left: -5.7%;
       @include background-opacity($font-color, 0.9);
+      @include at-medium-down() {
+        left: rem-calc(-120);
+      }
     }
 
     &.category-nav_right {
       right: -5.7%;
       @include background-opacity($font-color, 0.9);
+      @include at-medium-down() {
+        right: rem-calc(-120);
+      }
     }
   }
 
