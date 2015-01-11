@@ -68,10 +68,23 @@
   @media (max-width: 64.063em) { @content; }
 }
 
+/* ////////////////////////////////
+///////////// TABLET /////////////
+////////////////////////////// */
+
 /* min-width 641px, medium screens */
 @mixin at-medium(){
   @media (min-width: 40.06em) and (max-width: 64.063em) { @content; }
 }
+
+/* min-width 641px, medium screens and portrait */
+@mixin at-medium-portrait(){
+  @media (min-width: 40.06em) and (max-width: 64.063em) and (orientation: portrait) { @content; }
+}
+
+/* ////////////////////////////////
+///////////// MOBILE /////////////
+////////////////////////////// */
 
 /* max-width 640px, mobile-only styles, use when QAing mobile issues */
 @mixin at-small(){
