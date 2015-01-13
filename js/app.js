@@ -13,6 +13,14 @@ $('.off-canvas-wrap').on('click', function (e) {
     $(this).foundation('offcanvas', 'hide', 'move-right');
 });
 
+$(document).on('open.fndtn.offcanvas', '[data-offcanvas]', function () {
+    $(this).children('.inner-wrap').addClass('off-canvas-open');
+});
+
+$(document).on('close.fndtn.offcanvas', '[data-offcanvas]', function () {
+    $(this).children('.inner-wrap').removeClass('off-canvas-open');
+});
+
 
  function toggleModal(element) {
      element.toggleClass('hide');

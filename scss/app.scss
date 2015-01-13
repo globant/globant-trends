@@ -588,6 +588,15 @@ header {
     }
   }
 
+  @include at-large-only() {
+
+    @include single-transition(all, 0.30s, ease);
+
+    &.off-canvas-open {
+        padding-left: rem-calc(645);
+    }
+  }
+
 }
 
 .category-nav {
