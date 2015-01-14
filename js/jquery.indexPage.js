@@ -16,11 +16,14 @@
 
             $(document).on('open.fndtn.offcanvas', '[data-offcanvas]', function () {
                 $(this).children('.inner-wrap').addClass('off-canvas-open');
+                $(this).children('.inner-wrap').children('[data-trigger]').addClass('hide');
             });
 
             $(document).on('close.fndtn.offcanvas', '[data-offcanvas]', function () {
                 $(this).children('.inner-wrap').removeClass('off-canvas-open');
+                $(this).children('.inner-wrap').children('[data-trigger]').removeClass('hide');
             });
+
         });
 
     };
