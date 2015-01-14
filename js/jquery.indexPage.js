@@ -15,13 +15,15 @@
             });
 
             $this.on('open.fndtn.offcanvas', '[data-offcanvas]', function () {
-                $(this).children('.inner-wrap').addClass('off-canvas-open');
-                $(this).children('.inner-wrap').children('[data-trigger]').addClass('hide');
+                var $childrenInnerWrap =  $(this).children('.inner-wrap');
+                $childrenInnerWrap.addClass('off-canvas-open');
+                $childrenInnerWrap.children('[data-trigger]').addClass('hide');
             });
 
             $this.on('close.fndtn.offcanvas', '[data-offcanvas]', function () {
-                $(this).children('.inner-wrap').removeClass('off-canvas-open');
-                $(this).children('.inner-wrap').children('[data-trigger]').removeClass('hide');
+                var $childrenInnerWrap =  $(this).children('.inner-wrap');
+                $childrenInnerWrap.removeClass('off-canvas-open');
+                $childrenInnerWrap.children('[data-trigger]').removeClass('hide');
             });
 
         });
