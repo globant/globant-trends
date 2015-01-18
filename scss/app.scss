@@ -59,7 +59,7 @@ header {
 }
 
 .hero, .sketching, .benchmark, .interview, .mood-boards, .interaction, .video-for-work, .mobile-ux {
-  font-family: Miso Bold, Helvetica, Arial, sans-serif;
+  font-family: Miso Normal, Helvetica, Arial, sans-serif;
   background-size: contain;
   color: $white;
   text-align: center;
@@ -273,7 +273,7 @@ header {
       height: 100%;
       width: 100%;
       color: $white;
-      font-family: Miso Bold, Helvetica, Arial, sans-serif;
+      font-family: Miso Normal, Helvetica, Arial, sans-serif;
       text-transform: uppercase;
       font-size: rem-calc(50);
       padding: 0 rem-calc(20);
@@ -403,7 +403,7 @@ header {
 
   p.description {
     text-transform: uppercase;
-    font-family: Miso Bold, Helvetica, Arial, sans-serif;
+    font-family: Miso Normal, Helvetica, Arial, sans-serif;
   }
 
 }
@@ -437,7 +437,7 @@ header {
 }
 
 .pagination {
-  font-family: Miso Bold, Helvetica, Arial, sans-serif;
+  font-family: Miso Normal, Helvetica, Arial, sans-serif;
   color: $white;
   font-size: rem-calc(30);
   position: relative;
