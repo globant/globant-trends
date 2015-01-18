@@ -1,5 +1,9 @@
 .transparent {
 
+  &.right-off-canvas-toggle {
+    margin-top: rem-calc(55);
+  }
+
   @include transparent-button($white, $font-color);
 
   &.blue {

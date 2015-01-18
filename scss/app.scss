@@ -23,14 +23,14 @@ body {
 header {
   padding: rem-calc(40) 0 0;
 
-  h1 {
+  .globant-logo {
     background-image: url("../img/globant-logo.svg");
     background-repeat: no-repeat;
     width: rem-calc(250);
     background-size: rem-calc(250) auto;
     margin: 0 0 rem-calc(30) rem-calc(35);
 
-    a {
+    .link {
       display: block;
       text-indent: -99999px;
     }
@@ -63,6 +63,14 @@ header {
   background-size: contain;
   color: $white;
   text-align: center;
+  height: rem-calc(755);
+
+  @include at-small() {
+    height: rem-calc(655);
+  }
+
+  padding-top: rem-calc(120);
+  position: relative;
 
     .circle {
       font-size: rem-calc(163);
@@ -70,21 +78,43 @@ header {
       @include circle(rem-calc(213), $dark-green);
     }
 
-    h2 {
+    .hero-title {
       font-family: Miso Bold, Helvetica, Arial, sans-serif;
-      font-size: rem-calc(77);
+      font-size: rem-calc(95);
       text-align: center;
       text-transform: uppercase;
       margin: 0;
       color: $white;
+
+      @include at-small() {
+        font-size: rem-calc(65);
+      }
+
+      &.block {
+        font-size: rem-calc(122);
+        text-shadow: 2px 3px 3px $black;
+      }
     }
 
-    p {
+    .slogan {
       font-size: rem-calc(74);
       line-height: 2.8rem;
+      font-family: Miso Normal, "Open Sans", Helvetica, Arial, sans-serif;
 
       @include at-small() {
         font-size: rem-calc(55);
+      }
+    }
+
+    .description {
+      font-size: rem-calc(21px);
+      font-family: "Open Sans", sans-serif;
+      font-weight: 400;
+      line-height: 1.8rem;
+      text-shadow: 2px 2px 1px $black;
+
+      &.title {
+        padding-bottom: rem-calc(50px);
       }
     }
 
@@ -96,35 +126,6 @@ header {
   background-size: contain;
   height: rem-calc(655);
   padding-top: rem-calc(60);
-}
-
-.sketching, .benchmark, .interview, .mood-boards, .interaction, .video-for-work, .mobile-ux  {
-  height: rem-calc(755);
-
-  @include at-small() {
-    height: rem-calc(655);
-  }
-
-  padding-top: rem-calc(120);
-  position: relative;
-
-    h2 {
-      font-size: rem-calc(120);
-      text-shadow: 2px 3px 3px $black;
-    }
-
-    p {
-      font-size: rem-calc(21px);
-      font-family: "Open Sans", sans-serif;
-      font-weight: 400;
-      line-height: 1.8rem;
-      text-shadow: 2px 2px 1px $black;
-
-      &.description {
-        padding-bottom: rem-calc(50px);
-      }
-    }
-
 }
 
 .sketching {
@@ -143,7 +144,7 @@ header {
 
 .benchmark {
   background: $primary-red;
-    p {
+    .description {
       color: $secondary-yellow;
       text-shadow: none;
     }
@@ -153,10 +154,10 @@ header {
   background: url("../img/interview-row.jpg") no-repeat;
   background-size: cover;
 
-  h2 {
+  .block {
     color: $secondary-yellow;
   }
-  p {
+  .description {
     color: $turquoise;
     text-shadow: none;
   }
@@ -167,10 +168,10 @@ header {
   background: url("../img/light-blue-row.jpg") no-repeat;
   background-size: cover;
 
-  h2 {
+  .block {
     color: $white;
   }
-  p {
+  .description {
     color: $violetBlue;
     text-shadow: none;
   }
@@ -199,7 +200,11 @@ header {
   &.dark {
     background: $font-color;
     @include background-opacity($font-color, 0.9);
-    p {
+    .description {
+      color: $white;
+    }
+
+    .highlight {
       color: $white;
     }
 
@@ -219,7 +224,7 @@ header {
     @include circle(rem-calc(58), $light-blue);
   }
 
-    p {
+    .description {
       color: $font-color;
       font-size: rem-calc(16);
       text-shadow: none;
@@ -239,6 +244,8 @@ header {
   }
 }
 
+//// INTERVIEW ///////
+
 .interview-section {
 
   &.tabs-content {
@@ -246,18 +253,14 @@ header {
     background-size: rem-calc(452) auto;
   }
 
-  p {
-    font-size: rem-calc(18);
-  }
-
-  li {
+  .items {
     position: relative;
     overflow: hidden;
     @include at-small-portrait() {
       height: rem-calc(700);
     }
 
-    img {
+    .photo-profile {
       width: 100%;
 
       @include at-small-portrait() {
@@ -265,7 +268,7 @@ header {
       }
     }
 
-    a {
+    .profile-link {
       display: block;
       position: absolute;
       top: 0;
@@ -273,22 +276,23 @@ header {
       height: 100%;
       width: 100%;
       color: $white;
-      font-family: Miso Normal, Helvetica, Arial, sans-serif;
+      font-family: Miso Bold, Helvetica, Arial, sans-serif;
       text-transform: uppercase;
-      font-size: rem-calc(50);
       padding: 0 rem-calc(20);
       @include single-transition(background, 0.25s, linear);
 
-      span {
+      .profile-name {
         line-height: rem-calc(45);
         display: block;
         padding-top: rem-calc(330);
         white-space: pre-line;
         width: 80%;
+        font-size: rem-calc(55);
 
       }
 
       blockquote {
+        font-family: Miso Normal, Helvetica, Arial, sans-serif;
         color: $white;
         font-size: rem-calc(20);
         line-height: normal;
@@ -301,7 +305,7 @@ header {
     }
 
     &.active {
-      a {
+      .profile-link {
         @include background-opacity($font-color, 0.3);
       }
     }
@@ -324,7 +328,7 @@ header {
     color: $font-color;
     margin: rem-calc(40) 0 rem-calc(60);
 
-    img {
+    .post-image {
       max-width: rem-calc(645);
       @include at-small-portrait() {
         max-width: 100%;
@@ -362,11 +366,14 @@ header {
 
 }
 
+
+////// VIDEO //////
+
 .hero {
   &.video-header {
     padding-top: rem-calc(180);
 
-    h2 {
+    .hero-title {
       line-height: normal;
       font-size: rem-calc(100);
       span {
@@ -401,9 +408,11 @@ header {
     background-position: rem-calc(-510) center;
   }
 
-  p.description {
+  .description {
     text-transform: uppercase;
     font-family: Miso Normal, Helvetica, Arial, sans-serif;
+    font-size: rem-calc(25);
+    margin-bottom: rem-calc(55);
   }
 
 }
@@ -415,6 +424,13 @@ header {
 
   @include at-small() {
     height: rem-calc(655);
+  }
+
+  .description {
+    text-transform: uppercase;
+    font-family: Miso Normal, Helvetica, Arial, sans-serif;
+    font-size: rem-calc(25);
+    margin-bottom: rem-calc(55);
   }
 
 }
