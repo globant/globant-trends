@@ -135,9 +135,6 @@ header {
   @include at-small() {
     background-image: none;
     background-color: $turquoise;
-    p, h2 {
-      text-shadow: none;
-    }
   }
 
 }
